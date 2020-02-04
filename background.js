@@ -1,1 +1,1 @@
-chrome.tabs.create({ url: "http://google.com" });
+// chrome.tabs.create({ url: "http://google.com" });

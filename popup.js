@@ -5,6 +5,15 @@ document.addEventListener(
     checkPageButton.addEventListener(
       "click",
       function() {
+        function getElementByXpath(path) {
+          return document.evaluate(
+            path,
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+          ).singleNodeValue;
+        }
         chrome.tabs.getSelected(null, function(tab) {
           const name = getElementByXpath(
             "/html/body/div/section[2]/div/div/div[2]/div/div/div/form/div[1]/div/input"
